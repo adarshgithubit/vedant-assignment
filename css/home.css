@@ -1,0 +1,277 @@
+/* ==========================================================
+   ClassIQ - Home page (index.html)
+   ========================================================== */
+
+/* Hero ---------------------------------------------------- */
+.hero {
+  padding: 48px 0 32px;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.hero-title .highlight {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.hero-title .highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 10px;
+  background: url("../assets/images/dash-img.png") no-repeat center / 100% 100%;
+}
+
+.hero-text {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  max-width: 440px;
+  margin-bottom: 28px;
+}
+
+.hero-media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Soft green glow behind the avatar */
+.hero-media::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(194, 245, 120, 0.75) 0%, rgba(194, 245, 120, 0) 70%);
+  z-index: 0;
+}
+
+.hero-media img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Decorative sparkle strokes */
+.hero-sparkle {
+  position: absolute;
+  z-index: 2;
+  width: 3px;
+  height: 18px;
+  border-radius: 3px;
+  background-color: var(--color-dark);
+}
+
+.hero-sparkle--left {
+  top: 14%;
+  left: 12%;
+  transform: rotate(-40deg);
+}
+
+.hero-sparkle--left::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  width: 3px;
+  height: 12px;
+  border-radius: 3px;
+  background-color: var(--color-dark);
+  transform: rotate(50deg);
+}
+
+.hero-sparkle--right {
+  top: 8%;
+  right: 16%;
+  height: 22px;
+  background-color: var(--color-primary-dark);
+  transform: rotate(35deg);
+}
+
+/* Trusted by ---------------------------------------------- */
+.trusted {
+  padding: 32px 0 48px;
+  text-align: center;
+}
+
+.trusted-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  margin-bottom: 28px;
+}
+
+.brand-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.brand-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+
+.brand-list img {
+  max-height: 32px;
+  width: auto;
+  opacity: 0.55;
+  filter: grayscale(100%);
+  transition: opacity var(--transition), filter var(--transition);
+}
+
+.brand-list img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* Google has no image asset - styled text logo instead */
+.brand-text {
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #9a9a9a;
+  transition: color var(--transition);
+}
+
+.brand-text:hover {
+  color: var(--color-muted);
+}
+
+/* Course cards -------------------------------------------- */
+.course-card {
+  height: 100%;
+  background-color: var(--color-form-bg);
+  border-radius: var(--radius-lg);
+  padding: 40px 24px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.course-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  font-size: 1.125rem;
+  margin-bottom: 24px;
+}
+
+.course-card h3 {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.course-card .btn-primary-custom {
+  margin-top: auto;
+}
+
+/* All-in-one ---------------------------------------------- */
+.solution-media {
+  background-color: var(--color-form-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 32px;
+}
+
+.solution-media img {
+  width: 75%;
+  max-width: 340px;
+}
+
+.solution-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9375rem;
+}
+
+.feature-list li + li {
+  margin-top: 14px;
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  font-size: 0.8125rem;
+  flex-shrink: 0;
+}
+
+/* Responsive tweaks --------------------------------------- */
+@media (max-width: 991.98px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-media {
+    margin-top: 40px;
+  }
+
+  .solution-content {
+    text-align: center;
+  }
+
+  .feature-list {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .hero-media img {
+    max-width: 280px;
+  }
+}
