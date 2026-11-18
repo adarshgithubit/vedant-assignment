@@ -10,6 +10,7 @@
   --color-surface: #f4f4f4;
   --color-white: #ffffff;
   --color-border: #d4d4d4;
+  --color-btn-text: #3e3e3e;
 
   --font-family: Poppins, sans-serif;
 
@@ -62,7 +63,7 @@ h6 {
 }
 
 .section-title {
-  font-size: 1.25rem;
+  font-size: 28px;
   font-weight: 400;
   text-align: center;
   margin-bottom: 40px;
@@ -89,7 +90,7 @@ h6 {
 
 .btn-primary-custom {
   background-color: var(--color-primary);
-  color: var(--color-dark);
+  color: var(--color-btn-text);
   padding: 10px 22px;
   font-size: 0.875rem;
 }
@@ -97,13 +98,13 @@ h6 {
 .btn-primary-custom:hover,
 .btn-primary-custom:focus-visible {
   background-color: var(--color-primary-dark);
-  color: var(--color-dark);
+  color: var(--color-btn-text);
   transform: translateY(-1px);
 }
 
 .btn-primary-custom.btn-sm-custom {
   padding: 4px 14px;
-  font-size: 0.75rem;
+  font-size: 12px;
 }
 
 .btn-dark-custom {
@@ -200,6 +201,21 @@ html:not(.logged-in) .user-only {
 
   .nav-actions {
     margin-top: 12px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
+
+  .btn-dark-custom {
+    font-size: 16px;
   }
 }
 

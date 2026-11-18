@@ -258,6 +258,7 @@
   border: none;
   border-radius: 8px;
   background-color: var(--color-primary);
+  color: var(--color-btn-text);
   font-family: var(--font-family);
   font-size: 0.875rem;
   font-weight: 600;
